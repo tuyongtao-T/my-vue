@@ -1,0 +1,31 @@
+<!--
+ * @Author: TuYongTao
+ * @Date: 2021-09-18 19:05:31
+ * @LastEditors: your Name
+ * @LastEditTime: 2021-09-18 19:31:00
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>v-bind指令</title>
+</head>
+<body>
+  <div id="app" v-bind:title="title">
+    {{msg}}
+  </div>
+  <script>
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        msg: '鼠标悬停几秒钟查看绑定的提示信息',
+        title: '这是v-bind绑定的元素属性'
+      }
+    })
+  </script>
+</body>
+</html>

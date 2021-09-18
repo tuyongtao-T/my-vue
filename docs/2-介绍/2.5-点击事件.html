@@ -1,0 +1,36 @@
+<!--
+ * @Author: TuYongTao
+ * @Date: 2021-09-18 19:40:19
+ * @LastEditors: your Name
+ * @LastEditTime: 2021-09-18 19:55:32
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>v-on点击事件</title>
+</head>
+<body>
+  <div id="app">
+    <p>{{msg}}</p>
+    <button v-on:click="changeWord">改变文字</button>
+  </div>
+  <script>
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        msg: '请注意，我要被改变了',
+      },
+      methods: {
+        changeWord() {
+          this.msg = '数据已经改变'
+        }
+      }
+    })
+  </script>
+</body>
+</html>
